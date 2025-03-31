@@ -217,4 +217,7 @@
   .cert-title {
     font-size: 1.8rem;
   }
+  .cert-box {
+    padding: 0rem;
+  }
 }
