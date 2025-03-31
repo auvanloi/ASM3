@@ -570,3 +570,9 @@ footer a:active {
   color: #868e96;
   background-color: #e5dbff;
 }
+@media (max-width: 25em) {
+  .hobby {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+  }
+}
