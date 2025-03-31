@@ -20,7 +20,7 @@ html {
 /* ---------------- HEADER （BANNER， NAVBAR & AVATAR) ---------------- */
 .banner {
   position: relative;
-  background-image: linear-gradient(#0ca6784b, #0ca67870), url("/banner.jpg");
+  background-image: linear-gradient(#0ca6784b, #0ca67870), url("banner.jpg");
   background-size: cover;
 }
 .backgound-img {
