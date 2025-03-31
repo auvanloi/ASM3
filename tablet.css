@@ -1,0 +1,155 @@
+/* ------------------RESPONSIVE (62-48 EM 992px-768px)------------------ */
+@media (max-width: 62em) {
+  .backgound-img {
+    height: 35vw;
+    transition: all 0.5s;
+  }
+  .avatar,
+  .nav-job,
+  .nav-name {
+    display: none;
+    transition: all 0.5s;
+  }
+  nav {
+    justify-content: space-evenly;
+  }
+  .nav-left,
+  .nav-right {
+    width: 40%;
+  }
+  .nav-center {
+    width: 5%;
+    transition: all 0.5s;
+  }
+  /* -----------------------INFOMATION----------------------- */
+  .info-container {
+    justify-self: center;
+  }
+  .target {
+    padding: 2rem 5rem 0rem 10rem;
+    transition: all 0.5s;
+  }
+  .info {
+    padding: 2rem 5rem 0rem 5rem;
+    transition: all 0.5s;
+  }
+  .info-title,
+  .target-title {
+    font-size: 2.6rem;
+  }
+  .target-content,
+  .info-content {
+    font-size: 1.4rem;
+    line-height: 2;
+    color: #343a40;
+    padding-bottom: 2rem;
+  }
+
+  /* -----------------------INTRODUCTION----------------------- */
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    column-gap: 2rem;
+    row-gap: 1.5rem;
+    max-height: 130rem;
+  }
+  .intro-item {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: start;
+  }
+  .intro-title {
+    font-size: 2.2rem;
+  }
+  .intro-item0 {
+    order: 1;
+  }
+  .intro-item1 {
+    order: 5;
+  }
+  .intro-item2 {
+    order: 4;
+  }
+  .intro-item3 {
+    order: 6;
+  }
+  .intro-item4 {
+    order: 3;
+  }
+  .intro-item5 {
+    order: 2;
+  }
+
+  .hobby {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4rem;
+  }
+  /* ----------------CHỪNG CHỈ & GIAI THƯỞNG---------------- */
+  .cert-container {
+    row-gap: 4rem;
+  }
+  .cert-item {
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .cert-item img {
+    width: 100%;
+  }
+  .certcontainer::after {
+    top: 55%;
+  }
+  /* ---------------- DỰ ÁN ---------------- */
+  .project-container {
+    margin-bottom: 4rem;
+  }
+  .project-box {
+    padding: 4rem 2rem 2rem 2rem;
+  }
+  .project-name {
+    padding-left: 1rem;
+  }
+  .pro-subtitle {
+    height: 6rem;
+    justify-content: space-between;
+    text-align: left;
+    grid-template-columns: 0.8fr 2fr;
+    column-gap: 2rem;
+    padding: 0.5rem 0rem;
+  }
+  .pro-subtitle li:nth-child(3) {
+    grid-column: 2;
+  }
+  tr,
+  td {
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+    vertical-align: top;
+  }
+  table td:first-child {
+    padding-left: 1rem;
+  }
+  .pro-time {
+    width: 6rem;
+    text-align: center;
+    padding: 0.3rem 0rem;
+    margin-left: 1rem;
+  }
+  /* ----------------------FOOTER---------------------- */
+  footer {
+    height: 11rem;
+  }
+  footer a {
+    flex-direction: column;
+  }
+  footer i {
+    font-size: 2.6rem;
+  }
+  footer span {
+    font-size: 1.2rem;
+  }
+}
