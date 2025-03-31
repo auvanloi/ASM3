@@ -72,7 +72,7 @@ html {
 .banner {
   position: relative;
   background-image: linear-gradient(#0ca6784b, #0ca67870),
-    url("../images/banner.jpg");
+    url("banner.jpg");
   background-size: cover;
 }
 .backgound-img {
