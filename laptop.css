@@ -213,6 +213,7 @@ input::placeholder {
   grid-template-columns: 2fr 2fr;
   justify-content: space-between;
   border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.268);
 }
 .intro-title {
@@ -252,7 +253,7 @@ input::placeholder {
   align-self: start;
   border: 1px solid #e9ecef;
   border-bottom-left-radius: 5px;
-  border-top: none;
+  border-bottom-right-radius: 5px;
   border-top: none;
   font-size: 1.4rem;
   margin: 0;
