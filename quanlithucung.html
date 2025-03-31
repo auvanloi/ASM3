@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>QUẢN LÝ THÚ CƯNG</title>
+    <style>
+      html{
+        font-size: 62.5%;
+      }
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .mycontainer{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows:  1.8fr 1.2fr;
+      } 
+      .Scopes{
+        grid-row: 2/3;
+      }
+      .Scopes div {
+        display: flex;
+      }
+      .Timeline{
+        grid-column: 3;
+        grid-row: 1/3;
+      }
+      .Timeline div:nth-child(2){
+        width: 100%;
+      }
+      .Timeline p:nth-child(2){
+        border-bottom-style:dashed ;
+        border-width: 1px;
+        border-color: rgba(137, 43, 226, 0.447);
+      }
+      @media (max-width:48em) {
+        html{
+          font-size: 75%;
+        }
+        .mycontainer{
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows:  auto;
+        } 
+      .mycontainer div>div>div{
+        padding-right:1rem !important;
+      }
+      .Scopes{
+        grid-row: auto;
+      }
+      .Scopes div {
+        flex-direction: column;     
+      }
+      .Timeline div >div,
+      .Goals > div >div>div ,
+      .Team div>div,
+      .Primary div >div{
+        flex-direction: column;
+        gap:0 !important;
+      }
+      .Timeline{
+        grid-column: auto;
+       grid-row: auto;
+      }
+      }
+
+      @media (max-width:26em) {
+        html{
+          font-size: 100%;
+        }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container-lg bg-primary border border-4 border-primary mycontainer p-2 my-5 Larger shadow
+    ">
+
+      <div class="bg-light border border-1 p-3 m-2  border-primary Goals">
+        <div>
+          <h4 class="fw-bold text-primary border-bottom border-2 border-black pb-2">Goals</h4>
+          <div class="d-flex flex-column gap-2 ps-3 pe-5 pb-5">
+            <div class="d-flex gap-5 border-bottom border-1">
+              <div class="fs-3 ps-4 align-self-center">&#127937</div>
+              <div>
+                <p class="fs-6 fw-bold m-0">Goals1</p>
+                <p class="fs-6">Tiện dụng trong việc theo dõi và quản lý thú cưng</p>
+              </div>
+            </div>
+            <div class="d-flex gap-5 border-bottom border-1">
+              <div class="fs-3 ps-4 align-self-center">&#127937</div>
+              <div>
+                <p class="fs-6 fw-bold m-0">Goals2</p>
+                <p class="fs-6">Dễ dàng cập nhật thông tin mới nhất về từng loại thú cưng
+                </p>
+              </div>
+            </div>
+            <div class="d-flex gap-5 border-bottom border-1">
+              <div class="fs-3 ps-4 align-self-center">&#127937</div>
+              <div>
+                <p class="fs-6 fw-bold m-0">Goals3</p>
+                <p class="fs-6">Nhanh chóng tiện dụng trong việc quản lý các đơn hàng</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-light border border-1 p-3 m-2  border-primary Scopes">
+        <h4 class="fw-bold text-primary border-bottom border-2 border-black pb-2 container-fluid">Scopes</h4>
+        <div class="pb-5">
+          <div class="d-flex flex-column ps-3 pe-5">
+            <h6 class="fw-bold  m-0">IN</h6>
+            <ul class="list-unstyled d-flex flex-column gap-3">
+              <li>Chủ doanh nghiệp sở hữu của hàng thú cưng</li>
+              <li>Các cá nhân có nhu cầu sử dụng</li>
+            </ul>
+          </div>
+          <div class="d-flex flex-column ps-3 pe-5">
+            <h6 class="fw-bold m-0">OUT</h6>
+            <ul class="list-unstyled d-flex flex-column gap-3">
+              <li>Khách hàng cần mua , tư vấn về thú cưng</li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-light border border-1 p-3 m-2  border-primary Team">
+        <h4 class="fw-bold text-primary border-bottom border-2 border-black pb-2">Team</h4>
+        <div>
+          <div class="d-flex flex-column gap-0 ps-3 pe-5 pb-5">
+            <div class="d-flex gap-4">
+              <div class ="fs-2 align-self-center">🙎‍♂️</div>
+              <ul class="list-unstyled">
+                <li>Member 01</li>
+                <li>Name: ÂU VĂN LỢI</li>
+                <li>Mission: Phụ trách content</li>
+              </ul>
+            </div>
+            <div class="d-flex gap-4">
+              <div class ="fs-2 align-self-center">🙎‍♂️</div>
+              <ul class="list-unstyled">
+                <li>Member 02</li>
+                <li>Name: ÂU VĂN LỢI</li>
+                <li>Mission: Phụ trách layout</li>
+              </ul>
+            </div>
+            <div class="d-flex gap-4">
+              <div class="fs-2 align-self-center">🙎‍♂️</div>
+              <ul class="list-unstyled">
+                <li>Member 02</li>
+                <li>Name: ÂU VĂN LỢI</li>
+                <li>Mission: Phụ trách kiểm thử và gỡ lỗi</li>
+              </ul>
+            </div>
+            <div class="d-flex gap-4">
+              <div class="fs-2 align-self-center">🙎‍♂️</div>
+              <ul class="list-unstyled">
+                <li>Member 02</li>
+                <li>Name: ÂU VĂN LỢI</li>
+                <li>Mission: Phụ trách hosting bảo trì và cập nhât</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-light border border-1 p-3 m-2  border-primary Primary">
+          <h4 class="fw-bold text-primary border-bottom border-2 border-black pb-2">Primary</h4>
+        <div class="d-flex flex-column gap-3 ps-3 pe-5 pb-5">
+          <div class="d-flex gap-4">
+            <div class="fs-4 ps-2 align-self-center">❔</div>
+            <div>Ưu tiên layout, thiết kế trực quan đẹp mắt</div>
+          </div>
+          <div class="d-flex gap-4">
+            <div class="fs-4 ps-2 align-self-center">❔</div>
+            <div>Tiện dụng trong việc lưu trữ chỉnh sửa và chia sẻ thông tin giữa các bên</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-light border border-1 p-3 m-2  border-primary Timeline">
+        <h4 class="fw-bold text-primary border-bottom border-2 border-black pb-2">Timeline</h4>
+        <div class="d-flex flex-column gap-0 ps-3 pb-5">
+          <div class="d-flex gap-5">
+            <div class="fs-3 ps-3 text-primary">①</div>
+            <div>
+              <p class="fs-6 fw-bold m-0 m-0">Ngày 1</p>
+              <p class="fs-6 ">Lên ý tưởng về dự án, mục đính, các chức năng và thành phần chính</p>
+            </div>
+          </div>
+          <div class="d-flex gap-5">
+            <div class="fs-3 ps-3 text-primary">②</div>
+            <div>
+              <p class="fs-6 fw-bold m-0 m-0">Ngày 2</p>
+              <p class="fs-6 pb-2">Viết nội dung , tạo bố cục cơ bản cho trang web</p>
+            </div>
+          </div>
+          <div class="d-flex gap-5">
+            <div class="fs-3 ps-3 text-primary">③</div>
+            <div>
+                 <p class="fs-6 fw-bold m-0 m-0">Ngày 3</p>
+              <p class="fs-6 pb-2">Bổ sung thêm nội dung phụ, hoàn thành chỉnh sửa layout ,...</p>
+            </div>
+          </div>
+          <div class="d-flex gap-5">
+            <div class="fs-3 ps-3 text-primary">④</div>
+            <div>
+                 <p class="fs-6 fw-bold m-0 m-0">Ngày 4</p>
+              <p class="fs-6 pb-2">Test thử và gỡ lỗi trên máy tính tablet và mobile nếu có</p>
+            </div>
+          </div>
+          <div class="d-flex gap-5">
+            <div class="fs-3 ps-3 text-primary">⑤</div>
+            <div>
+                 <p class="fs-6 fw-bold m-0 m-0">Ngày 5</p>
+              <p class="fs-6 pb-2">Đưa dự án lên hosting và kiểm thử</p>
+            </div>
+          </div>
+          <div class="d-flex gap-5">
+            <div class="fs-3 ps-3 text-primary">⑥</div>
+            <div>
+                 <p class="fs-6 fw-bold m-0 m-0">Ngày 6</p>
+              <p class="fs-6 pb-2">Chạy thử trải ngiệm phía khách hàng</p>
+            </div>
+          </div>
+          <div class="d-flex gap-5">
+            <div class="fs-3 ps-3 text-primary">⑦</div>
+            <div>
+                 <p class="fs-6 fw-bold m-0 m-0">Ngày 7 trở đi</p>
+              <p class="fs-6 pb-2">Bảo trì dự án gỡ lỗi nếu có phản hồi phía khách hàng ,cập nhât thêm tính nằng mới ...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>
