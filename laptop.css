@@ -210,7 +210,7 @@ input::placeholder {
   padding: 2.6rem;
   width: 100%;
   display: grid;
-  grid-template-columns: 2fr 2fr;
+  grid-template-columns: 2fr 1fr;
   justify-content: space-between;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -222,7 +222,6 @@ input::placeholder {
 }
 
 .intro-title-box svg {
-  display: inline-block;
   fill: #be4bdb;
   height: 100%;
   width: 3.6rem;
