@@ -187,4 +187,32 @@
     opacity: 1;
     transition: 0.2s;
   }
+  .project-name:active {
+    color: #212529;
+    background-color: #e5dbff;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .intro-title button:active,
+  .intro-title-box:active {
+    z-index: 0;
+  }
+  .btn-submid:active {
+    background-color: #e5dbff;
+    color: #333;
+    transition: all 0.3s;
+  }
+  nav a:active {
+    background-color: #829cfa46;
+  }
+  .bntTop a:active {
+    color: #b8bdc3;
+    transition: 0.5s;
+  }
+  footer a:active {
+    color: #212529;
+    background-color: #e5dbff;
+    opacity: 1;
+    transition: 0.2s;
+  }
 }
