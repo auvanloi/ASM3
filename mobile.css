@@ -171,7 +171,8 @@
     font-size: 0.7rem;
     width: 6rem;
     height: 2rem;
-    bottom: 5%;
+    bottom: 0rem;
+    right: 0;
     justify-content: center;
   }
   .hobby {
