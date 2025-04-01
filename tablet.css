@@ -66,6 +66,9 @@
     width: 50%;
     align-items: start;
   }
+  .intro-title-box {
+    grid-template-columns: 1fr 1fr;
+  }
   .intro-title {
     font-size: 2.2rem;
   }
