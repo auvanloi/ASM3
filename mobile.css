@@ -84,11 +84,6 @@
     width: 100%;
     align-items: start;
   }
-  .intro-title-box svg {
-    height: 70%;
-    justify-self: end;
-    align-items: start;
-  }
   .hobby {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 4rem;
