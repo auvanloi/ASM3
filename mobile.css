@@ -167,6 +167,11 @@
   .intro-title-box {
     padding: 1rem 2.6rem 4rem 2.6rem;
   }
+  .intro-title-box svg {
+    height: 70%;
+    justify-self: end;
+    align-items: start;
+  }
   .intro-title-box button {
     font-size: 0.7rem;
     width: 6rem;
