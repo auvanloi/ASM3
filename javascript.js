@@ -33,7 +33,6 @@ for (let i = 0; i < 6; i++) {
       for (let i = 0; i < 6; i++) {
         document.querySelector(`.btn${i}`).style.zIndex = "-1";
       }
-      console.log(`.btn${i}`);
       document.querySelector(`.btn${i}`).style.zIndex = "1";
     });
 }
