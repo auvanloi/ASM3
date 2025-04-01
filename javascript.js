@@ -22,17 +22,24 @@ for (let i = 0; i < 6; i++) {
         : (swBtnLabel = "▼ VIEW MORE");
   }
 }
+function hiddenBtn() {
+  for (let i = 0; i < 6; i++) {
+    document.querySelector(`.btn${i}`).style.zIndex = "-1";
+  }
+}
+
 document.querySelector(".btn-submid").addEventListener("click", checkEmail);
 email.addEventListener("keypress", function keyEnter(a) {
   if (a.key === "Enter") checkEmail();
 });
+
+document.addEventListener("touchstart", hiddenBtn);
+
 for (let i = 0; i < 6; i++) {
   document
     .querySelector(`.box${i}`)
     .addEventListener("touchstart", function () {
-      for (let i = 0; i < 6; i++) {
-        document.querySelector(`.btn${i}`).style.zIndex = "-1";
-      }
+      hiddenBtn();
       document.querySelector(`.btn${i}`).style.zIndex = "1";
     });
 }
