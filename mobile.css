@@ -151,9 +151,9 @@
     padding-left: 1rem;
   }
   /* ----------------------FOOTER---------------------- */
-
-  footer i {
-    font-size: 2.4rem;
+  footer svg {
+    width: 2.2rem;
+    width: 2.2rem;
   }
   footer span {
     display: none;
