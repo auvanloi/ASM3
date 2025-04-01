@@ -26,3 +26,14 @@ document.querySelector(".btn-submid").addEventListener("click", checkEmail);
 email.addEventListener("keypress", function keyEnter(a) {
   if (a.key === "Enter") checkEmail();
 });
+for (let i = 0; i < 6; i++) {
+  document
+    .querySelector(`.box${i}`)
+    .addEventListener("touchstart", function () {
+      for (let i = 0; i < 6; i++) {
+        document.querySelector(`.btn${i}`).style.zIndex = "-1";
+      }
+      console.log(`.btn${i}`);
+      document.querySelector(`.btn${i}`).style.zIndex = "1";
+    });
+}
