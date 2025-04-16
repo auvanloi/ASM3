@@ -1,8 +1,11 @@
 "use strict";
+
+//CHECK EMAIL
 function checkEmail(email) {
   const regex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   email = document.querySelector(".email").value;
+
   if (regex.test(email)) {
     document.querySelector(".form-info").classList.toggle("hidden");
     document.querySelector(".info-content").classList.toggle("hidden");
@@ -11,35 +14,64 @@ function checkEmail(email) {
   }
 }
 
+// INTRODUCTION CLICK EVENT
+
 for (let i = 0; i < 6; i++) {
-  document.querySelector(`.btn${i}`).addEventListener("click", showhidden);
   let swBtnLabel = document.querySelector(`.btn${i}`).textContent;
-  function showhidden() {
-    document.querySelector(`.intro-item${i}`).classList.toggle("hidden");
-    document.querySelector(`.btn${i}`).textContent =
-      swBtnLabel === "▼ VIEW MORE"
-        ? (swBtnLabel = "▲ VIEW LESS")
-        : (swBtnLabel = "▼ VIEW MORE");
-  }
+  document
+    .querySelector(`.btn${i}`)
+    .addEventListener("click", function showhidden(event) {
+      document.querySelector(`.conten${i}`).classList.toggle("hidden");
+      document.querySelector(`.box${i}`).classList.toggle("borderbottom");
+      document.querySelector(`.btn${i}`).textContent =
+        swBtnLabel === "▼ VIEW MORE"
+          ? (swBtnLabel = "▲ VIEW LESS")
+          : (swBtnLabel = "▼ VIEW MORE");
+      event.preventDefault();
+    });
 }
-function hiddenBtn() {
-  for (let i = 0; i < 6; i++) {
-    document.querySelector(`.btn${i}`).style.zIndex = "-1";
-  }
-}
-
-document.querySelector(".btn-submid").addEventListener("click", checkEmail);
-email.addEventListener("keypress", function keyEnter(a) {
-  if (a.key === "Enter") checkEmail();
-});
-
-document.addEventListener("touchstart", hiddenBtn);
-
+//INTRODUCTION TOUCH EVENT
 for (let i = 0; i < 6; i++) {
+  // CONTAINER HIDDEN
+  function containerHidden() {
+    for (let j = 0; j < 6; j++) {
+      if (document.querySelector(`.conten${j}`).classList.contains("hidden")) {
+        document.querySelector(`.btn${j}`).classList.add("zid");
+        document.removeEventListener("touchstart", containerHidden);
+      }
+    }
+  }
+  // BOX HIDDEN
   document
     .querySelector(`.box${i}`)
-    .addEventListener("touchstart", function () {
-      hiddenBtn();
-      document.querySelector(`.btn${i}`).style.zIndex = "1";
+    .addEventListener("touchstart", function (event) {
+      if (
+        !document.querySelector(`.btn${i}`).classList.contains("zid") &&
+        document.querySelector(`.conten${i}`).classList.contains("hidden")
+      ) {
+        document.querySelector(`.btn${i}`).classList.add("zid");
+        document.removeEventListener("touchstart", containerHidden);
+      } else {
+        containerHidden();
+        document.querySelector(`.btn${i}`).classList.remove("zid");
+        document.addEventListener("touchstart", containerHidden);
+      }
+      event.stopPropagation();
+      event.preventDefault();
+    });
+  // BUTTON HIDDEN
+  document
+    .querySelector(`.btn${i}`)
+    .addEventListener("touchstart", function (event) {
+      document.querySelector(`.box${i}`).classList.toggle("borderbottom");
+      if (document.querySelector(`.conten${i}`).classList.contains("hidden")) {
+        document.querySelector(`.btn${i}`).textContent = "▲ VIEW LESS";
+        document.querySelector(`.conten${i}`).classList.remove("hidden");
+      } else {
+        document.querySelector(`.btn${i}`).textContent = "▼ VIEW MORE";
+        document.querySelector(`.conten${i}`).classList.add("hidden");
+      }
+      event.stopPropagation();
+      event.preventDefault();
     });
 }
