@@ -250,7 +250,8 @@ input::placeholder {
 }
 .zid {
   z-index: -1;
-}ro-content {
+}
+.inrro-content {
   width: 100%;
   height: 100%;
   align-self: start;
