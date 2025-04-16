@@ -231,7 +231,7 @@ input::placeholder {
   opacity: 0.7;
   justify-self: end;
 }
-.intro-title-box button {
+.btn-vm {
   text-align: center;
   font-size: 1rem;
   border: none;
@@ -243,13 +243,14 @@ input::placeholder {
   opacity: 0.7;
   bottom: 6%;
   left: 2.6rem;
-  z-index: -1;
 }
-.intro-title button:hover,
+.btn-vm:hover,
 .intro-title-box:hover {
-  z-index: 0;
+  z-index: 1;
 }
-.intro-content {
+.zid {
+  z-index: -1;
+}ro-content {
   width: 100%;
   height: 100%;
   align-self: start;
@@ -585,12 +586,14 @@ footer a:active {
   animation-duration: 7s;
 }
 
-.hidden .intro-title-box {
-  border-bottom: solid 1px #e9ecef;
-}
-.hidden .intro-content,
 .info .hidden,
 .form-info .hidden {
   display: none;
   border: none;
+}
+.intro-item .hidden {
+  display: none;
+}
+.intro-item .borderbottom {
+  border-bottom: 1px solid black;
 }
