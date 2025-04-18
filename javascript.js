@@ -13,6 +13,7 @@ function checkEmail(email) {
     alert("Email không hợp lệ vui lòng thử lại !");
   }
 }
+document.querySelector(".btn-submid").addEventListener("click",checkEmail);
 
 // INTRODUCTION CLICK EVENT
 
