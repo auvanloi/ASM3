@@ -37,24 +37,24 @@ for (let i = 0; i < 6; i++) {
     for (let j = 0; j < 6; j++) {
       if (document.querySelector(`.conten${j}`).classList.contains("hidden")) {
         document.querySelector(`.btn${j}`).classList.add("zid");
-        document.removeEventListener("touchstart", containerHidden);
+        document.removeEventListener("touchend", containerHidden);
       }
     }
   }
   // BOX HIDDEN
   document
     .querySelector(`.box${i}`)
-    .addEventListener("touchstart", function (event) {
+    .addEventListener("touchend", function (event) {
       if (
         !document.querySelector(`.btn${i}`).classList.contains("zid") &&
         document.querySelector(`.conten${i}`).classList.contains("hidden")
       ) {
         document.querySelector(`.btn${i}`).classList.add("zid");
-        document.removeEventListener("touchstart", containerHidden);
+        document.removeEventListener("touchend", containerHidden);
       } else {
         containerHidden();
         document.querySelector(`.btn${i}`).classList.remove("zid");
-        document.addEventListener("touchstart", containerHidden);
+        document.addEventListener("touchend", containerHidden);
       }
       event.stopPropagation();
       event.preventDefault();
@@ -62,7 +62,7 @@ for (let i = 0; i < 6; i++) {
   // BUTTON HIDDEN
   document
     .querySelector(`.btn${i}`)
-    .addEventListener("touchstart", function (event) {
+    .addEventListener("touchend", function (event) {
       document.querySelector(`.box${i}`).classList.toggle("borderbottom");
       if (document.querySelector(`.conten${i}`).classList.contains("hidden")) {
         document.querySelector(`.btn${i}`).textContent = "▲ VIEW LESS";
