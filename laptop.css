@@ -596,5 +596,5 @@ footer a:active {
   display: none;
 }
 .intro-item .borderbottom {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #e9ecef;
 }
