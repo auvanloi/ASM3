@@ -267,6 +267,10 @@ input::placeholder {
   flex-grow: 1;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.268);
 }
+.btn-vm {
+    font-size: 0.8rem;
+    height: 2.2rem;
+  }
 .intro-content li {
   line-height: 1.6;
 }
